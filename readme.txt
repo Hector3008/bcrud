@@ -10,6 +10,6 @@ te puse unos APIs
 4
 trabajé los campos de texto, numero, bolean y fecha
 5
-y también tienes un formulario para buscar autores, está en la pestaña izquierda
+y también tienes un formulario para buscar autores, está en la pestaña derecha
 
 Feliz navidad y año nuevo!
