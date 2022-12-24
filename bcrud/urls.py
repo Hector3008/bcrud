@@ -12,7 +12,7 @@ urlpatterns = [
     #render a padre
     path("padre/",views.padre),
     #render a inicio
-    path("inicio/",views.inicio,name='inicio'),
+    path("",views.inicio,name='inicio'),
 
     #APIS
     path("autoresapi/",views.autoresapi, name='autoresapi'),
