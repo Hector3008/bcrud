@@ -1,0 +1,17 @@
+<!--etiqueta que carga el html heredado -->
+{% extends "bcrud/padre.html" %}
+
+<!--etiqueta que carga la informacion estatica -->
+{% load static %}
+
+<!--etiqueta que carga el bloque del html heredado -->
+{% block contenidoQueCambia %}
+
+
+<form method="post">{% csrf_token %}
+  ¿Estás seguro que deseas borrar la entrada "{{ object.titulo }}"?
+  <input type="submit" value="Eliminar" />
+</form>
+  <a href="{% url 'elist'%}"> cancelar</a>
+
+{% endblock %}

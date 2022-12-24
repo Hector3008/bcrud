@@ -1,0 +1,29 @@
+<!--etiqueta que carga el html heredado -->
+{% extends "bcrud/padre.html" %}
+
+<!--etiqueta que carga la informacion estatica -->
+{% load static %}
+
+<!--etiqueta que carga el bloque del html heredado -->
+{% block contenidoQueCambia %}
+
+<ul>
+  
+  <h5><a href="{%url 'canew'%}">Crear nueva categoria</a></h5>
+  
+
+    {%for item in object_list%}
+
+
+      <p>nombre de la categoria: <br> {{item.nombres}}</p>
+
+      <p>
+        <a href="{%url 'cadetail' item.id%}">Ver</a>
+        <a href="{%url 'caedit' item.id%}">Editar</a>
+        <a href="{%url 'cadelete' item.id%}">Borrar</a>
+      </p>
+    {%endfor%}
+
+</ul>
+
+{% endblock %}

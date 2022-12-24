@@ -1,0 +1,16 @@
+<!--etiqueta que carga el html heredado -->
+{% extends "bcrud/padre.html" %}
+
+<!--etiqueta que carga la informacion estatica -->
+{% load static %}
+
+<!--etiqueta que carga el bloque del html heredado -->
+{% block contenidoQueCambia %}
+
+  nombre : {{nombre}}
+  descripcion:
+  {%for descripcion in descripciones%}
+    {{descripcion.descripcion}}
+  {%endfor%}
+
+{% endblock %}

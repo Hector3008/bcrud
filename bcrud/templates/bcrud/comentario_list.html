@@ -1,0 +1,33 @@
+<!--etiqueta que carga el html heredado -->
+{% extends "bcrud/padre.html" %}
+
+<!--etiqueta que carga la informacion estatica -->
+{% load static %}
+
+<!--etiqueta que carga el bloque del html heredado -->
+{% block contenidoQueCambia %}
+
+<ul>
+  
+  <h5><a href="{%url 'cnew'%}">Crear nueva comentario</a></h5>
+  
+
+    {%for item in object_list%}
+
+      <p>comentario: 
+        <br>
+        {{item.Texto}}</p>
+      <p>autor:
+        <br>
+         {{item.Comentador}}</p>
+      <p>like: {{item.Like}}</p>
+      <p>
+        <a href="{%url 'cdetail' item.id%}">Ver</a>
+        <a href="{%url 'cedit' item.id%}">Editar</a>
+        <a href="{%url 'cdelete' item.id%}">Borrar</a>
+      </p>
+    {%endfor%}
+
+</ul>
+
+{% endblock %}

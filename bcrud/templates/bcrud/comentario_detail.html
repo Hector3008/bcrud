@@ -1,0 +1,18 @@
+<!--etiqueta que carga el html heredado -->
+{% extends "bcrud/padre.html" %}
+
+<!--etiqueta que carga la informacion estatica -->
+{% load static %}
+
+<!--etiqueta que carga el bloque del html heredado -->
+{% block contenidoQueCambia %}
+
+
+
+
+<p>comentario: {{comentario.Texto}}</p>
+<p>autor: {{comentario.Comentador}}</p>
+<p>like: {{comentario.Like}}</p>
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+<!--etiqueta que carga el html heredado -->
+{% extends "bcrud/padre.html" %}
+
+<!--etiqueta que carga la informacion estatica -->
+{% load static %}
+
+<!--etiqueta que carga el bloque del html heredado -->
+{% block contenidoQueCambia %}
+
+<p>categoria: {{categoria.nombres}}</p>
+<p>descripcion: {{categoria.descripcion}}</p>
+<p>fecha de creacion: {{categoria.fecha}}</p>
+
+
+{% endblock %}

@@ -1,0 +1,20 @@
+<!--etiqueta que carga el html heredado -->
+{% extends "bcrud/padre.html" %}
+
+<!--etiqueta que carga la informacion estatica -->
+{% load static %}
+
+<!--etiqueta que carga el bloque del html heredado -->
+{% block contenidoQueCambia %}
+
+    Ingresar un Autor:
+    <br>
+    <form action="" method="post">{% csrf_token %}
+      <table>
+        {{form.as_table}}
+      </table>
+      <input type="submit" value="Cargar">
+    </form>
+    
+
+{% endblock %}
